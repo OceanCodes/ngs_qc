@@ -1,4 +1,4 @@
-# hash:sha256:8361889675fc7528a2cd62495eb33ecc20d8db7f95a01afd9571bf7f8f960de7
+# hash:sha256:4518d9069926874e2cac13779c6877c13507da1226c6b7437f5d71de55ce572e
 FROM registry.poc-astrazeneca.codeocean.io/codeocean/jupyterlab:3.0.9-miniconda4.9.2-vscode4.0.2-python3.8-ubuntu20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -15,3 +15,6 @@ RUN apt-get update \
 RUN conda install -y --channel=bioconda \
         fastqc==0.11.8 \
     && conda clean -ya
+
+RUN pip install -U --no-cache-dir \
+    multiqc==1.14

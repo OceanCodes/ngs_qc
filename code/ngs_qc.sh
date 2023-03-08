@@ -9,4 +9,9 @@ for file in $(find -L ../data -name "*.fastq*"); do
 done
 wait
 
-echo "Finished with FastQC"
+echo "Finished with FastQC, Start MultiQC"
+
+mkdir ../results/FastQC 
+mv ../results/G* ../results/FastQC
+
+multiqc ../results -o ../results 
