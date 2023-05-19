@@ -17,3 +17,5 @@ mv ../results/G* ../results/FastQC
 multiqc ../results -o ../results 
 
 #im making changes!
+
+#lets make more changes
