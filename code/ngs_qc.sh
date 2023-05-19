@@ -15,3 +15,5 @@ mkdir ../results/FastQC
 mv ../results/G* ../results/FastQC
 
 multiqc ../results -o ../results 
+
+#im making changes!
